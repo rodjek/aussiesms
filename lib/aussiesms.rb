@@ -43,6 +43,13 @@ module AussieSMS
     })
   end
 
+  def balance
+    apicall("querybalance", {
+      :mobileID => @id,
+      :password => @password
+    }).body.to_i
+  end
+
   def apicall(action, args)
     uri = URI.parse(API_URL)
     http = Net::HTTP.new(uri.host, uri.port)
