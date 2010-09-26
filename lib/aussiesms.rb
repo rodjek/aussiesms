@@ -46,6 +46,8 @@ module AussieSMS
   def apicall(action, args)
     uri = URI.parse(API_URL)
     http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new("/?#{action}&#{encode_args(args)}")
     http.request(request)
   end
