@@ -7,8 +7,8 @@ Setting up
 ----------
 
     require 'aussiesms'
-    AussieSMS.id = ""
-    AussieSMS.password = ""
+    AussieSMS.id = "<aussiesms id>"
+    AussieSMS.password = "<password>"
 
 Sending a message
 -----------------
