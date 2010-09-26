@@ -34,7 +34,7 @@ module AussieSMS
 
   def send(message, options={})
     apicall("sendsms", {
-      :message => message,
+      :text => message,
       :to => options[:to],
       :from => options[:from] || @from,
       :mobileID => @id,
