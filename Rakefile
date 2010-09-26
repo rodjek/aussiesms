@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "aussiesms"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = "Send text messages via aussiesms.com.au"
+    gem.description = "Send text messages via aussiesms.com.au"
     gem.email = "tim@sharpe.id.au"
     gem.homepage = "http://github.com/rodjek/aussiesms"
     gem.authors = ["rodjek"]
