@@ -50,6 +50,8 @@ module AussieSMS
     }).body.to_i
   end
 
+  private
+
   def apicall(action, args)
     uri = URI.parse(API_URL)
     http = Net::HTTP.new(uri.host, uri.port)
