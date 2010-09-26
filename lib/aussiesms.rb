@@ -33,7 +33,7 @@ module AussieSMS
   end
 
   def send(message, options={})
-    apicall("sendsms", {
+    send_resp = apicall("sendsms", {
       :text => message,
       :to => options[:to],
       :from => options[:from] || @from,
@@ -41,6 +41,20 @@ module AussieSMS
       :password => @password,
       :msg_type => "SMS_TEXT"
     })
+
+    msg_id = send_resp.body.split(':')[1]
+
+    check_resp = apicall("querymessage", {
+      :mobileID => @id,
+      :password => @password,
+      :msg_id => msg_id
+    })
+
+    if check_resp.body.split(':')[0] != '1'
+      false
+    else
+      true
+    end
   end
 
   def balance
