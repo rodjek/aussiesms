@@ -1,8 +1,23 @@
-= aussiesms
+aussiesms
+=========
 
-Description goes here.
+Send text messages with AussieSMS (http://www.aussiesms.com.au).
 
-== Note on Patches/Pull Requests
+Setting up
+----------
+
+    require 'aussiesms'
+    AussieSMS.id = ""
+    AussieSMS.password = ""
+
+Checking your balance
+---------------------
+
+    >> AussieSMS.balance
+    => 5
+
+Note on Patches/Pull Requests
+-----------------------------
  
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -12,6 +27,7 @@ Description goes here.
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+Copyright
+---------
 
 Copyright (c) 2010 rodjek. See LICENSE for details.
